@@ -1,0 +1,11 @@
+create database soror;
+use soror;
+
+create table usuario(
+	id_usuario integer not null,
+	nome varchar(70),
+	email varchar(50),
+	senha varchar(30),
+	confirmar_senha varchar(30),
+	cpf char(11)
+);

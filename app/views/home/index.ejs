@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sóror</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width", initial-scale="1.0">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+	<link rel="shotcut icon" href="img/logozinha.png">
+</head>
+<body>
+	<header id="header">
+		<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+			<div class="container">
+					<a href="#home">
+						<img src="img/logo.png" class="logo">
+					</a>
+				<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent">
+					<div class="linha"></div>
+					<div class="linha"></div>
+					<div class="linha"></div>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li><a href="#home" class="nav-link"><strong>Home</strong></a></li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><strong>Serviços</strong></a>
+					    <ul class="dropdown-menu">
+				        <li><a class="dropdown-item" href="#buscar"><strong>Buscar</strong></a></li>
+						    <hr></hr>
+						    <li><a class="dropdown-item" href="#cad"><strong>Cadastrar</strong></a></li>
+				      </ul>
+				    </li>
+						<li><a href="#aprender" class="nav-link"><strong>Aprender</strong></a></li>
+						<li><a href="#relatar" class="nav-link"><strong>Relatar</strong></a></li>
+						<li class="perfilimg" id="perfilimg"><a href="#perfil"><img src="img/perfil2.png"></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<section class="home" id="home">
+			<div class="container conteudohome">
+				<img src="img/logo.png" class="logoinicio">
+				<p>A palavra sóror significa <span class="italico">irmãs</span> em latim. Ela deu origem ao termo <span class="italico">sororidade</span>, ou seja, irmandade.</p>
+				<h1>O que você deseja?</h1>
+				<div class="botoes">
+					<button class="btnroxo" onclick="aprender()">Aprender</button>
+					<button class="btnroxo" onclick="relatar()">Relatar</button>
+					<div class="relativa">
+						<button class="btnroxo" id="servico" onclick="abrirServico();">Serviços</button>
+						<ul class="lista" id="listaOculta">
+			        <li><a href="#buscar">Buscar</a></li>
+			        <hr>
+					    <li><a href="#cad">Cadastrar</a></li>
+			      </ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="buscar container" id="buscar">
+			<div class="titulo">
+				<h2>Buscar Serviço</h2>
+				<form>
+					<input type="search" placeholder="Buscar">
+					<button class="btnsearch">
+						<img src="img/search.png" class="">
+					</button>
+				</form>
+			</div>
+			<div class="busca container"><!-- ajuda: funcionamento da busca-->
+				<div class="itembusca">
+					<div class="infoinicial">	
+						<button class="btnabrir" id="btnabrir" onclick="btnAbrir();">+</button>
+						<h4>Específico (nome do serviço)</h4>
+					</div>
+					<ul class="dropdowninfo" id="dropdowninfo">
+						<li>Categoria</li><hr>
+						<li>Descrição</li><hr>
+						<li>Contato</li>
+		      </ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="cad " id="cad"><!-- ajuda; além do funcionamento do cadastro,eu acho que depois do login (preciso fazer a tela de login kkk) essa section da pra ser substituido pelo perfil (?) bem simples só pra editar e adicionar informações-->
+			<div class="container">
+				<div class="titulo">
+					<h2 class="cadtitulo">Cadastro</h2>
+				</div>
+				<div class="cad_servicos">
+
+					<form class="pessoal" action="/soror/salvar" method="POST">
+						<h3>Dados Pessoais</h3>
+						<div>
+							<p><input type="text" id="nome" placeholder="Nome" name="nome"></p>
+							<p id="msg_nome"></p>
+							<p><input type="email" id="email" placeholder="Email" name="email"></p>
+							<p id="msg_email"></p>
+							<p><input type="password" id="senha" placeholder="Senha" name="senha"></p>			
+							<p id="msg_senha"></p>		
+							<p><input type="password" id="confirmasenha" placeholder="Confirmar senha" name="confirmar_senha"></p>
+							<p id="msg_confirmarSenha"></p>
+							<p><input type="cpf" id="cpf" placeholder="CPF" name="cpf"></p>
+							<p id="msg_cpf"></p>
+						</div>
+						<div class="btnpessoal">
+							<button class="btnroxo">Salvar</button>
+							<button onclick = "trocaTrindade()">Já possui conta?</button>
+						</div>
+					</form>
+					<div class="servico" >
+						<h3>Serviço</h3>
+						<div>
+							<p><input type="text" id="categoria" placeholder="Categoria"></p>
+							<p><input type="text" id="especifico" placeholder="Especifico"></p>
+							<p><textarea id="descricao" class="desc" placeholder="Descrição"></textarea></p>
+							<p><input type="number" id="contato" placeholder="Contato"></p>
+						</div>
+						<div class="btnservico">
+							<button class="btnadd" onclick="addform()">
+								<img class="" src="img/add.png">
+							</button>
+							<button class="btnroxo">Salvar</button>
+						</div> 
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="login" id="login">
+			<div class="container">
+				<div class="titulo">
+					<h2 class="logintitulo">Login</h2>
+				</div>
+			</div>
+			<div class="loginconteudo">
+				<div class="log">
+					<p><input type="email" id="emaillog" placeholder="Email"></p>
+					<p><input type="password" id="senhalog" placeholder="Senha"></p>
+					<p><input type="password" id="confirmasenhalog" placeholder="Confirmar senha"></p>
+					<div class="btnlogin">
+						<button class="btnroxo" id="btnEntrarPerfil">Entrar</button>
+						<button onclick="trocaTrindade()">Não possui conta?</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="perfil" id="perfil"> <!-- já ta estilizado mas por enquanto deixei display none pq precisa definir se essa section vai mesmo substituir a tela de cadastro depois do login, ou se eu faço outro arquivo html (que na verdade eu ja fiz e estilizei, no perfil.html, mas qualuqer coisa é só apagar ne)-->
+			<div class="container">
+				<div class="titulo">
+					<h2 class="perfiltitulo">Perfil</h2>
+					<p class="perfiltitulo">Esta página é visível apenas para você. Suas informações estão seguras.</p>
+				</div>
+				<div class="perfilconteudo">
+					<div class="perfilpessoal">
+						<img src="img/perfil3.png">
+						<h3>Nome</h3>
+						<p>Email</p>
+						<p>Senha</p>
+						<p>CPF</p>
+						<button class="btnroxo">Editar</button>
+					</div>
+					<div class="perfilservicos">
+						<img src="img/servico2.png">
+						<h3>Específico</h3>
+						<p>Categoria</p>
+						<p>Descrição</p>
+						<p>Contato</p>
+						<button class="btnroxo">Editar</button>
+					</div>	
+				</div> 	
+			</div>
+		</section>
+
+
+
+
+
+		<section class="aprender" id="aprender"> <!-- ajuda: o carrossel pelo amor de deus  -->
+			<div class="container">
+				<div class="titulo">
+					<h2>Aprender</h2>
+					<form>
+						<input type="search" placeholder="Buscar">
+						<button class="btnsearch">
+							<img src="img/search.png" class="">
+						</button>
+					</form>
+				</div>
+				
+				<div class="slides">
+					<button class="btncarrousell" id="volta"><</button>
+					<div class="slide">
+						<h1>Título</h1>
+						<p>Isso é um exemplo. Nessa paginá ficará um carrossel com informações a respeito do feminismo, como suas vententes e curiosidades, em textos simples e claros. Cada caixinha caixinha dessa é parte do carrossel. Não sei como fazer isso (alo Jónison?)</p>
+					</div>
+					<div class="slide">
+						<h1>Título</h1>
+						<p>Isso é um exemplo. Nessa paginá ficará um carrossel com informações a respeito do feminismo, como suas vententes e curiosidades, em textos simples e claros. Cada caixinha caixinha dessa é parte do carrossel. Não sei como fazer isso (alo Jónison?)</p>
+					</div>
+					<div class="slide">
+						<h1>Título</h1>
+						<p>Isso é um exemplo. Nessa paginá ficará um carrossel com informações a respeito do feminismo, como suas vententes e curiosidades, em textos simples e claros. Cada caixinha caixinha dessa é parte do carrossel. Não sei como fazer isso (alo Jónison?)</p>
+					</div>
+					<div class="slide">
+						<h1>Título</h1>
+						<p>Isso é um exemplo. Nessa paginá ficará um carrossel com informações a respeito do feminismo, como suas vententes e curiosidades, em textos simples e claros. Cada caixinha caixinha dessa é parte do carrossel. Não sei como fazer isso (alo Jónison?)</p>
+					</div>
+					<button class="btncarrousell" id="vai">></button>
+				</div>
+				
+			</div>	
+		</section>
+
+		<section class="relatar" id="relatar"> <!-- ajuda: postagem dos relatos  -->
+			<div class="container">
+				<div class="titulo titulorelato">
+					<h2>Relatos</h2>
+					<form>
+						<input type="search" placeholder="Buscar relato">
+						<button class="btnsearch">
+							<img src="img/search.png" class="">
+						</button>
+					</form>
+				</div>
+				<div class="relatos">
+					<div class="relatoform">
+						<h3>Enviar um relato</h3>
+						<form class="formajuste">
+							<p><input type="text" id="nomerelato" placeholder="Nome (opcional)"></p>
+							<p><input type="email" id="emailrelato" placeholder="Email"></p>
+							<p><input type="text" id="assuntorelato" placeholder="Assunto"></p>
+							<p><textarea class="desc" type="password" id="descrelato" placeholder="Relato"></textarea></p>
+							<button class="btnroxo">Enviar relato</button>
+						</form>
+					</div>
+					<div class="relato">
+						<h3>Título</h3>
+						<p>Essa caixinha ta aqui como exemplo; cada caixinha dessa será um relato. O processo para adicionar um relato aqui deverá ser: enviar um relato ao email do adm através do formulário, o adm fará uma análise e decidirá se vai postar ou não. Não sei como vou fazer isso (alo Jónison?).</p>
+					</div>
+					<div class="relato">
+						<h3>Título</h3>
+						<p>Essa caixinha ta aqui como exemplo; cada caixinha dessa será um relato. O processo para adicionar um relato aqui deverá ser: enviar um relato ao email do adm através do formulário, o adm fará uma análise e decidirá se vai postar ou não. Não sei como vou fazer isso (alo Jónison?).</p>
+					</div>
+					<div class="relato">
+						<h3>Título</h3>
+						<p>Essa caixinha ta aqui como exemplo; cada caixinha dessa será um relato. O processo para adicionar um relato aqui deverá ser: enviar um relato ao email do adm através do formulário, o adm fará uma análise e decidirá se vai postar ou não. Não sei como vou fazer isso (alo Jónison?).</p>
+					</div>
+					<div class="relato">
+						<h3>Título</h3>
+						<p>Essa caixinha ta aqui como exemplo; cada caixinha dessa será um relato. O processo para adicionar um relato aqui deverá ser: enviar um relato ao email do adm através do formulário, o adm fará uma análise e decidirá se vai postar ou não. Não sei como vou fazer isso (alo Jónison?).</p>
+					</div>
+					<div class="relato">
+						<h3>Título</h3>
+						<p>Essa caixinha ta aqui como exemplo; cada caixinha dessa será um relato. O processo para adicionar um relato aqui deverá ser: enviar um relato ao email do adm através do formulário, o adm fará uma análise e decidirá se vai postar ou não. Não sei como vou fazer isso (alo Jónison?).</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="primeiro-footer">
+			<div class="logofooter">
+				<img src="img/logozinha.png">
+				<a target="_blank" href="/sobrenos">Sobre nós</a>
+			</div>
+			<div class="info">
+				<div class="infozinha">
+					<h3>Madu</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</p>
+					<div class="redessociais">
+						<a target="_blank" href="mailto:marieduarda.s.carbonari@gmail.com?subject=Sóror">
+							<img src="img/email.png">
+						</a>
+						<a target="_blank" href="https://api.whatsapp.com/send?phone=5567998609500&text=S%C3%B3ror.">
+							<img src="img/wpp.png">
+						</a>
+						<a target="_blank" href="https://www.instagram.com/dudacarbonari/?hl=pt-br">
+							<img src="img/insta.png">
+						</a>
+					</div>
+				</div>
+				<div class="infozinha">
+					<h3>Júlia</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</p>
+					<div class="redessociais">
+						<a target="_blank" href="mailto:juliagiord@hotmail.com?subject=Sóror">
+							<img src="img/email.png">
+						</a>
+						<a target="_blank" href="https://api.whatsapp.com/send?phone=5567999917980&text=S%C3%B3ror.">
+							<img src="img/wpp.png">
+						</a>
+						<a target="_blank" href="https://www.instagram.com/juliagiord/?hl=pt-br">
+							<img src="img/insta.png">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="segundo-footer">
+			<p href="#">Madu e Júlia &copy; 2019</p>
+		</div>
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="js/link.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="js/addform.js"></script>
+	<script src="js/header.js"></script>
+	<script src="js/dropdown.js"></script>
+	<script src="js/addTransition.js"></script>
+	<script src="js/trindade.js"></script>
+</body>
+</html>
