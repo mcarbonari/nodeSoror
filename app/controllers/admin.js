@@ -9,7 +9,7 @@ module.exports.soror_salvar = function(app, req, res){
 	var sororModel = new app.app.models.sororDAO(connection);
 
 	sororModel.salvarUsuario(usuario, function(error, result){
-	res.redirect('/sobrenos');
+	res.redirect('/#cad');
 	});
 }
 

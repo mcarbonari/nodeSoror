@@ -3,15 +3,15 @@ var login = document.querySelector('#login');
 
 
 function startTrindade(){
-	cad.style.display = 'block';
-	login.style.display = 'none';
+	cad.style.display = 'none';
+	login.style.display = 'block';
 }
 
 
 function trocaTrindade(){
-	if(cad.style.display == 'block'){
-		cad.style.display = 'none';
-		login.style.display = 'block';
+	if(cad.style.display == 'none'){
+		cad.style.display = 'block';
+		login.style.display = 'none';
 	}
 	else{
 		startTrindade();
