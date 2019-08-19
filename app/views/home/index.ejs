@@ -31,7 +31,7 @@
 						    <hr></hr>
 						    <li><a class="dropdown-item" href="#cad"><strong>Cadastrar</strong></a></li>
 				      </ul>
-				    </li>
+				    </li>		
 						<li><a href="#aprender" class="nav-link"><strong>Aprender</strong></a></li>
 						<li><a href="#relatar" class="nav-link"><strong>Relatar</strong></a></li>
 						<li class="perfilimg" id="perfilimg"><a href="#perfil"><img src="img/perfil2.png"></a></li>
@@ -55,7 +55,7 @@
 						<ul class="lista" id="listaOculta">
 			        <li><a href="#buscar">Buscar</a></li>
 			        <hr>
-					    <li><a href="#cad">Cadastrar</a></li>
+					    <li><a href="#login">Login</a></li>
 			      </ul>
 					</div>
 				</div>
@@ -103,7 +103,7 @@
 							<p id="msg_email"></p>
 							<p><input type="password" id="senha" placeholder="Senha" name="senha"></p>			
 							<p id="msg_senha"></p>		
-							<p><input type="password" id="confirmasenha" placeholder="Confirmar senha" name="confirmar_senha"></p>
+							<p><input type="password" id="confirmar_senha" placeholder="Confirmar senha" name="confirmar_senha"></p>
 							<p id="msg_confirmarSenha"></p>
 							<p><input type="cpf" id="cpf" placeholder="CPF" name="cpf"></p>
 							<p id="msg_cpf"></p>
@@ -116,10 +116,10 @@
 					<div class="servico" >
 						<h3>Serviço</h3>
 						<div>
-							<p><input type="text" id="categoria" placeholder="Categoria"></p>
-							<p><input type="text" id="especifico" placeholder="Especifico"></p>
-							<p><textarea id="descricao" class="desc" placeholder="Descrição"></textarea></p>
-							<p><input type="number" id="contato" placeholder="Contato"></p>
+							<p><input type="text" id="categoria" name="categoria" placeholder="Categoria"></p>
+							<p><input type="text" id="especifico" name="especifico" placeholder="Especifico"></p>
+							<p><textarea id="descricao" class="desc" name="desc" placeholder="Descrição"></textarea></p>
+							<p><input type="number" id="contato" name="contato" placeholder="Contato"></p>
 						</div>
 						<div class="btnservico">
 							<button class="btnadd" onclick="addform()">

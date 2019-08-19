@@ -1,5 +1,4 @@
 module.exports = function(app){
-
 	app.get('/sobrenos', function(req, res){
 		app.app.controllers.admin.sobrenos(app, req, res);
 	});

@@ -9,3 +9,5 @@ create table usuario(
 	confirmar_senha varchar(30),
 	cpf char(11)
 );
+
+select * from usuario;
