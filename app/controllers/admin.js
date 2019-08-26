@@ -15,7 +15,7 @@ module.exports.soror_salvar = function(app, req, res){
 	var erros = req.validationErrors();
 	if (erros){
 		console.log(erros);
-		res.render("./views/home/index.ejs", {validacao: erros});
+		res.render("home/index", {validacao: erros});
 		return;
 	}
 
