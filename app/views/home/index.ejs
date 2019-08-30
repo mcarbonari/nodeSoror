@@ -30,7 +30,7 @@
 					    <ul class="dropdown-menu">
 				        <li><a class="dropdown-item" href="#buscar"><strong>Buscar</strong></a></li>
 						    <hr></hr>
-						    <li><a class="dropdown-item" href="#cad"><strong>Cadastrar</strong></a></li>
+						    <li><a class="dropdown-item" href="#login"><strong>Login</strong></a></li>
 				      </ul>
 				    </li>		
 						<li><a href="#aprender" class="nav-link"><strong>Aprender</strong></a></li>
@@ -95,18 +95,18 @@
 				</div>
 				<div class="cad_servicos">
 
-					<form class="pessoal" action="/soror/salvar" method="POST">
+					<form class="pessoal" action="/soror/salvar" method="POST" name="form1">
 						<h3>Dados Pessoais</h3>
 						<div>
-							<p><input type="text" id="nome" placeholder="Nome" name="nome"></p>
+							<p><input type="text" id="nome" placeholder="Nome" name="nome" required></p>
 							<p id="msg_nome"></p>
-							<p><input type="email" id="email" placeholder="Email" name="email"></p>
+							<p><input type="email" id="email" placeholder="Email" name="email" required></p>
 							<p id="msg_email"></p>
-							<p><input type="password" id="senha" placeholder="Senha" name="senha"></p>			
+							<p><input type="password" id="senha" placeholder="Senha" name="senha" required></p>			
 							<p id="msg_senha"></p>		
-							<p><input type="password" id="confirmar_senha" placeholder="Confirmar senha" name="confirmar_senha"></p>
+							<p><input type="password" id="confirmar_senha" placeholder="Confirmar senha" name="confirmar_senha" required></p>
 							<p id="msg_confirmarSenha"></p>
-							<p><input type="cpf" id="cpf" placeholder="CPF" name="cpf"></p>
+							<p><input type="cpf" id="cpf" placeholder="CPF" name="cpf" required onKeyPress="MascaraCPF(form1.cpf);" maxlength="14" onBlur="ValidarCPF(form1.cpf);" ></p>
 							<p id="msg_cpf"></p>
 						</div>
 						<div class="btnpessoal">
@@ -143,7 +143,6 @@
 				<div class="log">
 					<p><input type="email" id="emaillog" placeholder="Email"></p>
 					<p><input type="password" id="senhalog" placeholder="Senha"></p>
-					<p><input type="password" id="confirmasenhalog" placeholder="Confirmar senha"></p>
 					<div class="btnlogin">
 						<button class="btnroxo" id="btnEntrarPerfil">Entrar</button>
 						<button onclick="trocaTrindade()" class="btntransparente">Não possui conta?</button>
@@ -309,7 +308,7 @@
 			<p href="#">Madu e Júlia &copy; 2019</p>
 		</div>
 	</footer>
-
+	<script type="text/javascript" src="js/validador.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

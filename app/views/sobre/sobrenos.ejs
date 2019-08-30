@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head> 
 	<title>Sóror - Sobre nós</title>
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width", initial-scale="1.0">
+	<base href="/">
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<link rel="stylesheet" type="text/css" href="css/sobrenos.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -11,39 +13,37 @@
 </head>
 <body>
 	<header id="header">
-		<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-			<div class="container">
+		<nav class="navbar navbar-light bg-white fixed-top">
+			<div class="container retornar">
 					<a href="#home">
+						retornar à
 						<img src="img/logo.png" class="logo">
 					</a>
-				<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent">
-					<div class="linha"></div>
-					<div class="linha"></div>
-					<div class="linha"></div>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav mr-auto">
-						<li><a href="index.html#home" class="nav-link"><strong>Home</strong></a></li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><strong>Serviços</strong></a>
-					    <ul class="dropdown-menu">
-				        <li><a class="dropdown-item" href="index.html#buscar"><strong>Buscar</strong></a></li>
-						    <hr></hr>
-						    <li><a class="dropdown-item" href="index.html#cad"><strong>Cadastrar</strong></a></li>
-				      </ul>
-				    </li>
-						<li><a href="index.html#aprender" class="nav-link"><strong>Aprender</strong></a></li>
-						<li><a href="index.html#relatar" class="nav-link"><strong>Relatar</strong></a></li>
-						<li class="perfilimg" id="perfilimg"><a href="index.html#perfil"><img src="img/perfil2.png"></a></li>
-
-					</ul>
-				</div>
 			</div>
 		</nav>
 	</header>
 
 	<main>
-		<p>preciso coloca a história do site. trabalho nas aulas. tcc. fetec. diário de bordo?????? umas foto? hmm.</p>
+		<section class="container sobrecontent">
+			<div class="comeco">
+				<h2>Como tudo começou</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="coletivo">
+				<h2>coletivo de mulheres</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+	</section>
 	</main>
 
 	<footer>
@@ -89,5 +89,9 @@
 			<p href="#">Madu e Júlia &copy; 2019</p>
 		</div>
 	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -1,3 +1,50 @@
 main{
-	height: 100vh;
+	height: 80vh;
+	margin-top: 80px;
+}
+
+.retornar a{
+	  color: #2e183b; 
+    text-decoration: none;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.retornar a:hover {
+    color: #2e183b;
+    text-decoration: none;
+}
+
+.sobrecontent{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.comeco h2, .coletivo h2{
+	text-transform: uppercase;
+}
+
+.comeco, .coletivo{
+	display: flex;
+	flex-direction: column;
+	margin: 1rem;
+	/*border: solid 1px red;*/
+	align-items: center;
+	text-align: justify;
+}
+
+
+@media screen and (min-width: 725px){
+	.comeco{
+		align-items: flex-start;
+		text-align: left;
+	}
+
+	.coletivo{
+		align-items: flex-end;
+		text-align: right;
+	}
 }
