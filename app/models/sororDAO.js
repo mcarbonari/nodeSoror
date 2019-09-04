@@ -3,7 +3,8 @@ function sororDAO(connection){
 }
 
 sororDAO.prototype.getUsuario = function(callback) {
-	this._connection.query('select * from usuario', callback);
+	 var n = this._connection.query('select * from usuario where email = \' '+ email.value +'\' and senha = \''+ senha.value +'\'', callback);
+	 return n;
 }
 
 sororDAO.prototype.salvarUsuario = function(usuario, callback){
