@@ -9,7 +9,8 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
 	<link rel="shotcut icon" href="img/logozinha.png">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" type="text/css" href="css/modal.css">
+	<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 </head>
 <body>
 	<header id="header">
@@ -142,10 +143,10 @@
 			</div>
 			<div class="loginconteudo">
 				<div class="log">
-					<p><input type="email" id="emaillog" placeholder="Email"></p>
-					<p><input type="password" id="senhalog" placeholder="Senha"></p>
+					<p><input type="email" id="emaillog" name="email" placeholder="Email"></p>
+					<p><input type="password" id="senhalog" name="senha" placeholder="Senha"></p>
 					<div class="btnlogin">
-						<button class="btnroxo" id="btnEntrarPerfil">Entrar</button>
+						<button class="btnroxo" id="btnEntrarPerfil" onclick="abreperfil()">Entrar</button>
 						<button onclick="trocaTrindade()" class="btntransparente">Não possui conta?</button>
 					</div>
 				</div>
@@ -201,24 +202,19 @@
 						<h1>Título</h1>
 						<p>Isso é um exemplo. Nessa paginá ficará um carrossel com informações a respeito do feminismo, como suas vententes e curiosidades, em textos simples e claros. Cada caixinha caixinha dessa é parte do carrossel. Não sei como fazer isso (alo Jónison?)</p>
 
-						 <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Animated Modal</button>
+						<!-- Trigger the Modal -->
+						<span class="modalbutton" id="myImg">Ver mais</span>
 
-					  <div id="id01" class="w3-modal">
-					    <div class="w3-modal-content w3-animate-zoom w3-card-4">
-					      <header class="w3-container w3-teal"> 
-					        <span onclick="document.getElementById('id01').style.display='none'" 
-					        class="w3-button w3-display-topright">&times;</span>
-					        <h2>Modal Header</h2>
-					      </header>
-					      <div class="w3-container">
-					        <p>Some text..</p>
-					        <p>Some text..</p>
-					      </div>
-					      <footer class="w3-container w3-teal">
-					        <p>Modal Footer</p>
-					      </footer>
-					    </div>
-					  </div>
+						<!-- The Modal -->
+						<div id="myModal" class="modal">
+
+						    <!-- The Close Button -->
+						    <span class="close">&times;</span>
+
+						    <!-- Modal Content (The Image) -->
+						    <p class="modal-content" id="img01"> </p>
+
+						</div>
 
 					</div>
 					<div class="slide">
@@ -340,5 +336,6 @@
 	<script src="js/dropdown.js"></script>
 	<script src="js/addTransition.js"></script>
 	<script src="js/trindade.js"></script>
+	<script src="js/modal.js"></script>
 </body>
 </html>
