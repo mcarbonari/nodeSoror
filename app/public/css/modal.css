@@ -4,20 +4,6 @@
   transition: 0.3s;
 }
 
-.modalbutton{
-  background-color: rgba(104, 35, 102, 1);
-  border-style: none;
-  padding: 8px 10px ;
-  border-radius: 5px;
-  color: white;
-  width: 110px;
-  font-size: 14px;
-  margin-top: 10px;
-  text-transform: uppercase;
-  box-shadow: 3px 3px 20px #696969;
-  text-align: center;
-}
-
 #myImg:hover {opacity: 0.7;}
 
 /* The Modal (background) */
@@ -25,7 +11,7 @@
   color: white;
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 15; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
@@ -46,18 +32,6 @@
   background-color: transparent !important;
 }
 
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
-/*#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
-*/
 /* Add Animation - Zoom in the Modal */
 .modal-content{
   animation-name: zoom;

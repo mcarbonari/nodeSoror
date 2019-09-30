@@ -1,0 +1,40 @@
+.caixa{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+	width: 25%;
+  margin: 10px 5px 20px 5px;
+  padding: 1rem;
+  background-color: var(--lilas2);
+  border-radius: 15px;
+  box-shadow:0px 3px 10px rgba(0, 0, 0, 0.30);
+
+}
+
+.modalbutton{
+  background-color: rgba(104, 35, 102, 1);
+  border-style: none;
+  padding: 8px 10px ;
+  border-radius: 5px;
+  color: white;
+  width: 110px;
+  font-size: 14px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  box-shadow: 3px 3px 20px #696969;
+  text-align: center;
+}
+
+.caixa h1{
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+.caixa p{
+  text-align: justify;
+  color: rgba(255, 255, 255, 0.8);
+  width: 95%;
+  margin: 0 auto;
+}
