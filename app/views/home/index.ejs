@@ -11,7 +11,6 @@
 	<link rel="shotcut icon" href="img/logozinha.png">
 	<link rel="stylesheet" type="text/css" href="css/modal.css">
 	<link rel="stylesheet" type="text/css" href="css/carrossel.css">
-	<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 </head>
 <body>
 	<header id="header">
@@ -91,7 +90,7 @@
 			</div>
 		</section>
 
-		<section class="cad " id="cad"><!-- ajuda; além do funcionamento do cadastro,eu acho que depois do login (preciso fazer a tela de login kkk) essa section da pra ser substituido pelo perfil (?) bem simples só pra editar e adicionar informações-->
+		<section class="cad " id="cad">
 			<div class="container">
 				<div class="titulo">
 					<h2 class="cadtitulo">Cadastro</h2>
@@ -144,17 +143,17 @@
 			</div>
 			<div class="loginconteudo">
 				<div class="log">
-					<p><input type="email" id="emaillog" name="email" placeholder="Email"></p>
-					<p><input type="password" id="senhalog" name="senha" placeholder="Senha"></p>
+					<p><input type="email" id="emaillog" name="email" placeholder="Email" required></p>
+					<p><input type="password" id="senhalog" name="senha" placeholder="Senha" required></p>
 					<div class="btnlogin">
-						<button class="btnroxo" id="btnEntrarPerfil" onclick="abreperfil()">Entrar</button>
+						<button type="submit" name="login" class="btnroxo" id="btnEntrarPerfil" onclick="abreperfil()">Entrar</button>
 						<button onclick="trocaTrindade()" class="btntransparente">Não possui conta?</button>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="perfil" id="perfil"> <!-- já ta estilizado mas por enquanto deixei display none pq precisa definir se essa section vai mesmo substituir a tela de cadastro depois do login, ou se eu faço outro arquivo html (que na verdade eu ja fiz e estilizei, no perfil.html, mas qualuqer coisa é só apagar ne)-->
+		<section class="perfil" id="perfil"> <!-- essa section vai aparecer quando o usuario realizar o login, vai substituir a section login-->
 			<div class="container">
 				<div class="titulo">
 					<h2 class="perfiltitulo">Perfil</h2>
@@ -181,11 +180,7 @@
 			</div>
 		</section>
 
-
-
-
-
-		<section class="aprender" id="aprender"> <!-- ajuda: o carrossel pelo amor de deus  -->
+		<section class="aprender" id="aprender">
 			<div class="container">
 				<div class="titulo">
 					<h2>Aprender</h2>
@@ -208,160 +203,160 @@
 		        <div class="carousel-item active">
 		          <div class="d-flex">
 		            <div class="w-25 caixa" alt="...">
-		            	<h1>Título</h1>
+		            	<h1>Título1</h1>
 									<p>Isso é um exemplo. Nessa paginá ficará um carrossel com informações resumidas a respeito do feminismo, como suas vententes e curiosidades, em textos simples e claros.</p>
-	                <!-- <span class="modalbutton" id="myImg">Ver mais</span>
+	                <span class="modalbutton" id="myButton">Ver mais</span>
 	                <div id="myModal" class="modal">
-	                    <span class="close">&times;</span>
-	                    <p class="modal-content" id="img01"> </p>
-	                </div> -->
+                    <span class="close">&times;</span>
+                    <p class="modal-content" id="texto"> </p>
+	                </div> 
 		            </div>
 		            <div class="w-25 caixa" alt="...">
 		            	<h1>Título</h1>
 									<p>Isso é um exemplo. Nessa paginá ficará um carrossel com informações resumidas a respeito do feminismo, como suas vententes e curiosidades, em textos simples e claros.</p>
-	                <span class="modalbutton" id="myImg">Ver mais</span>
+	                <span class="modalbutton" id="myButton">Ver mais</span>
 	                <div id="myModal" class="modal">
-	                    <span class="close">&times;</span>
-	                    <p class="modal-content" id="img01"> </p>
+                    <span class="close">&times;</span>
+                    <p class="modal-content" id="texto"> </p>
 	                </div>
 		            </div>
 		            <div class="w-25 caixa" alt="...">
 		            	<h1>Título</h1>
 									<p>Isso é um exemplo. Nessa paginá ficará um carrossel com informações resumidas a respeito do feminismo, como suas vententes e curiosidades, em textos simples e claros.</p>
-	                <!-- <span class="modalbutton" id="myImg">Ver mais</span>
+	                <span class="modalbutton" id="myButton">Ver mais</span>
 	                <div id="myModal" class="modal">
-	                    <span class="close">&times;</span>
-	                    <p class="modal-content" id="img01"> </p>
-	                </div> -->
+                    <span class="close">&times;</span>
+                    <p class="modal-content" id="texto"> </p>
+	                </div>
 		            </div>
 		            <div class="w-25 caixa" alt="...">
 		            	<h1>Título</h1>
 									<p>Isso é um exemplo. Nessa paginá ficará um carrossel com informações resumidas a respeito do feminismo, como suas vententes e curiosidades, em textos simples e claros.</p>
-	                <!-- <span class="modalbutton" id="myImg">Ver mais</span>
+	                <span class="modalbutton" id="myButton">Ver mais</span>
 	                <div id="myModal" class="modal">
-	                    <span class="close">&times;</span>
-	                    <p class="modal-content" id="img01"> </p>
-	                </div> -->
-		            </div>
-		          </div>
-		        </div>
-		        <div class="carousel-item">
-		          <div class="d-flex">
-		            <div class="w-25 caixa" alt="...">
-		            	<h1>Título</h1>
-									<p>Isso é um exemplo. Nessa paginá ficará um carrossel com informações resumidas a respeito do feminismo, como suas vententes e curiosidades, em textos simples e claros.</p>
-	                <!-- <span class="modalbutton" id="myImg">Ver mais</span>
-	                <div id="myModal" class="modal">
-	                    <span class="close">&times;</span>
-	                    <p class="modal-content" id="img01"> </p>
-	                </div> -->
-		            </div>
-		            <div class="w-25 caixa" alt="...">
-		            	<h1>Título</h1>
-									<p>Isso é um exemplo. Nessa paginá ficará um carrossel com informações resumidas a respeito do feminismo, como suas vententes e curiosidades, em textos simples e claros.</p>
-	                <!-- <span class="modalbutton" id="myImg">Ver mais</span>
-	                <div id="myModal" class="modal">
-	                    <span class="close">&times;</span>
-	                    <p class="modal-content" id="img01"> </p>
-	                </div> -->
-		            </div>
-		            <div class="w-25 caixa" alt="...">
-		            	<h1>Título</h1>
-									<p>Isso é um exemplo. Nessa paginá ficará um carrossel com informações resumidas a respeito do feminismo, como suas vententes e curiosidades, em textos simples e claros.</p>
-	                <!-- <span class="modalbutton" id="myImg">Ver mais</span>
-	                <div id="myModal" class="modal">
-	                    <span class="close">&times;</span>
-	                    <p class="modal-content" id="img01"> </p>
-	                </div> -->
-		            </div>
-		            <div class="w-25 caixa" alt="...">
-		            	<h1>Título</h1>
-									<p>Isso é um exemplo. Nessa paginá ficará um carrossel com informações resumidas a respeito do feminismo, como suas vententes e curiosidades, em textos simples e claros.</p>
-	                <!-- <span class="modalbutton" id="myImg">Ver mais</span>
-	                <div id="myModal" class="modal">
-	                    <span class="close">&times;</span>
-	                    <p class="modal-content" id="img01"> </p>
-	                </div> -->
+                    <span class="close">&times;</span>
+                    <p class="modal-content" id="texto"> </p>
+	                </div>
 		            </div>
 		          </div>
 		        </div>
 		        <div class="carousel-item">
 		          <div class="d-flex">
 		            <div class="w-25 caixa" alt="...">
+		            	<h1>Título2</h1>
+									<p id=" marxista">Isso é um exemplo. Nessa paginá ficará um carrossel com informações resumidas a respeito do feminismo, como suas vententes e curiosidades, em textos simples e claros.</p>
+	                <span class="modalbutton" id="myButton">Ver mais</span>
+	                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <p class="modal-content" id="texto"> </p>
+	                </div>
+		            </div>
+		            <div class="w-25 caixa" alt="...">
 		            	<h1>Título</h1>
 									<p>Isso é um exemplo. Nessa paginá ficará um carrossel com informações resumidas a respeito do feminismo, como suas vententes e curiosidades, em textos simples e claros.</p>
-	                <!-- <span class="modalbutton" id="myImg">Ver mais</span>
+	                <span class="modalbutton" id="myButton">Ver mais</span>
 	                <div id="myModal" class="modal">
-	                    <span class="close">&times;</span>
-	                    <p class="modal-content" id="img01"> </p>
-	                </div> -->
+                    <span class="close">&times;</span>
+                    <p class="modal-content" id="texto"> </p>
+	                </div>
+		            </div>
+		            <div class="w-25 caixa" alt="...">
+		            	<h1>Título</h1>
+									<p>Isso é um exemplo. Nessa paginá ficará um carrossel com informações resumidas a respeito do feminismo, como suas vententes e curiosidades, em textos simples e claros.</p>
+	                <span class="modalbutton" id="myButton">Ver mais</span>
+	                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <p class="modal-content" id="texto"> </p>
+	                </div>
+		            </div>
+		            <div class="w-25 caixa" alt="...">
+		            	<h1>Título</h1>
+									<p>Isso é um exemplo. Nessa paginá ficará um carrossel com informações resumidas a respeito do feminismo, como suas vententes e curiosidades, em textos simples e claros.</p>
+	                <span class="modalbutton" id="myButton">Ver mais</span>
+	                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <p class="modal-content" id="texto"> </p>
+	                </div>
+		            </div>
+		          </div>
+		        </div>
+		        <div class="carousel-item">
+		          <div class="d-flex">
+		            <div class="w-25 caixa" alt="...">
+		            	<h1>Título3</h1>
+									<p>Você partiu meu coração.... aoooo meu coração... mas por favor não sinta pena, não não não... Agora vai demoooooooocrraaaaaatiiiiiicaaaaameeeente.</p>
+	                <span class="modalbutton" id="myButton">Ver mais</span>
+	                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <p class="modal-content" id="texto"> </p>
+	                </div>
 		            </div>
 		            <div class="w-25 caixa" alt="...">
 		              <h1>Título</h1>
 									<p>Isso é um exemplo. Nessa paginá ficará um carrossel com informações resumidas a respeito do feminismo, como suas vententes e curiosidades, em textos simples e claros.</p>
-	                <!-- <span class="modalbutton" id="myImg">Ver mais</span>
+	                <span class="modalbutton" id="myButton">Ver mais</span>
 	                <div id="myModal" class="modal">
-	                    <span class="close">&times;</span>
-	                    <p class="modal-content" id="img01"> </p>
-	                </div> -->
+                    <span class="close">&times;</span>
+                    <p class="modal-content" id="texto"> </p>
+	                </div>
 		            </div>
 		            <div class="w-25 caixa" alt="...">
 		            	<h1>Título</h1>
 									<p>Isso é um exemplo. Nessa paginá ficará um carrossel com informações resumidas a respeito do feminismo, como suas vententes e curiosidades, em textos simples e claros.</p>
-	                <!-- <span class="modalbutton" id="myImg">Ver mais</span>
+	                <span class="modalbutton" id="myButton">Ver mais</span>
 	                <div id="myModal" class="modal">
-	                    <span class="close">&times;</span>
-	                    <p class="modal-content" id="img01"> </p>
-	                </div> -->
+                    <span class="close">&times;</span>
+                    <p class="modal-content" id="texto"> </p>
+	                </div>
 		            </div>
 		            <div class="w-25 caixa" alt="...">
 		            	<h1>Título</h1>
 									<p>Isso é um exemplo. Nessa paginá ficará um carrossel com informações resumidas a respeito do feminismo, como suas vententes e curiosidades, em textos simples e claros.</p>
-	                <!-- <span class="modalbutton" id="myImg">Ver mais</span>
+	                <span class="modalbutton" id="myButton">Ver mais</span>
 	                <div id="myModal" class="modal">
-	                    <span class="close">&times;</span>
-	                    <p class="modal-content" id="img01"> </p>
-	                </div> -->
+                    <span class="close">&times;</span>
+                    <p class="modal-content" id="texto"> </p>
+	                </div>
 		            </div>
 		          </div>
 		        </div>
 		        <div class="carousel-item">
 		          <div class="d-flex">
 		            <div class="w-25 caixa" alt="...">
-		            	<h1>Título</h1>
+		            	<h1>Título4</h1>
 									<p>Isso é um exemplo. Nessa paginá ficará um carrossel com informações resumidas a respeito do feminismo, como suas vententes e curiosidades, em textos simples e claros.</p>
-	                <!-- <span class="modalbutton" id="myImg">Ver mais</span>
+	                <span class="modalbutton" id="myButton">Ver mais</span>
 	                <div id="myModal" class="modal">
-	                    <span class="close">&times;</span>
-	                    <p class="modal-content" id="img01"> </p>
-	                </div> -->
+                    <span class="close">&times;</span>
+                    <p class="modal-content" id="texto"> </p>
+	                </div>
 		            </div>
 		            <div class="w-25 caixa" alt="...">
 		            	<h1>Título</h1>
 									<p>Isso é um exemplo. Nessa paginá ficará um carrossel com informações resumidas a respeito do feminismo, como suas vententes e curiosidades, em textos simples e claros.</p>
-	                <!-- <span class="modalbutton" id="myImg">Ver mais</span>
+	                <span class="modalbutton" id="myButton">Ver mais</span>
 	                <div id="myModal" class="modal">
-	                    <span class="close">&times;</span>
-	                    <p class="modal-content" id="img01"> </p>
-	                </div> -->
+                    <span class="close">&times;</span>
+                    <p class="modal-content" id="texto"> </p>
+	                </div>
 		            </div>
 		            <div class="w-25 caixa" alt="...">
 		            	<h1>Título</h1>
 									<p>Isso é um exemplo. Nessa paginá ficará um carrossel com informações resumidas a respeito do feminismo, como suas vententes e curiosidades, em textos simples e claros.</p>
-	                <!-- <span class="modalbutton" id="myImg">Ver mais</span>
+	                <span class="modalbutton" id="myButton">Ver mais</span>
 	                <div id="myModal" class="modal">
-	                    <span class="close">&times;</span>
-	                    <p class="modal-content" id="img01"> </p>
-	                </div> -->
+                    <span class="close">&times;</span>
+                    <p class="modal-content" id="texto"> </p>
+	                </div>
 		            </div>
 		            <div class="w-25 caixa" alt="...">
 		            	<h1>Título</h1>
 									<p>Isso é um exemplo. Nessa paginá ficará um carrossel com informações resumidas a respeito do feminismo, como suas vententes e curiosidades, em textos simples e claros.</p>
-	                <!-- <span class="modalbutton" id="myImg">Ver mais</span>
+	                <span class="modalbutton" id="myButton">Ver mais</span>
 	                <div id="myModal" class="modal">
-	                    <span class="close">&times;</span>
-	                    <p class="modal-content" id="img01"> </p>
-	                </div> -->
+                    <span class="close">&times;</span>
+                    <p class="modal-content" id="texto"> </p>
+	                </div>
 		            </div>
 		          </div>
 		        </div>
@@ -375,9 +370,7 @@
 		        <span class="sr-only">Next</span>
 		      </a>
 		    </div>
-  
-    
-				
+  				
 			</div>	
 		</section>
 
