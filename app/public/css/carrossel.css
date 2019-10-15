@@ -1,15 +1,20 @@
+/*.linhac{
+  display: flex;
+  flex-wrap: wrap;
+}*/
+
 .caixa{
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 300px;
-	width: 25%;
+	width: 100%;
   margin: 10px 5px 20px 5px;
   padding: 1rem;
   background-color: var(--lilas2);
   border-radius: 15px;
   box-shadow:0px 3px 10px rgba(0, 0, 0, 0.30);
-
+  text-overflow: ellipsis;
 }
 
 .modalbutton{
@@ -38,4 +43,8 @@
   color: rgba(255, 255, 255, 0.8);
   width: 95%;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 725px){
+
 }

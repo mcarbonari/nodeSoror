@@ -244,7 +244,8 @@ hr{
 .perfil, 
 .login{
 	height: 100%;
-	background-color: var(--roxo2);
+	background-color: var(--lilas);
+	padding-bottom: 25px;
 }
 
 .cadtitulo, 
@@ -362,6 +363,7 @@ hr{
 .relatar{
 	background-color: var(--lilas);
 	height: 100%;
+	padding-bottom: 20px;
 }
 
 .relatar h2{
@@ -502,8 +504,7 @@ footer{
 	}
 
 	.infozinha{
-		margin-right: 30px;
-		margin-bottom: 0;
+		margin: 15px 30px 15px 0;
 		align-items: flex-start;
 		border-radius: 10px;
 	}
