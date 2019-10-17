@@ -10,7 +10,7 @@ module.exports.soror_salvar = function(app, req, res){
 	req.assert('email', 'Email é obrigatório').isEmail();
 	req.assert('senha', 'Senha é obrigatório').notEmpty();
 	req.assert('confirmar_senha', 'Confirmar senha é obrigatório').notEmpty();
-	req.assert('cpf', 'CPF inválido').len(11, 11);
+	req.assert('cpf', 'CPF inválido').len(14, 14);
 
 	var erros = req.validationErrors();
 	if (erros){

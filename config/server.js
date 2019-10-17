@@ -11,6 +11,12 @@ app.set('views', './app/views');
 
 app.use(bodyParser.urlencoded({extended:true}));
 
+app.use(session({
+	secret: 'secret',
+	resave: true,
+	saveUninitialized: false
+}));
+
 app.use(expressValidator());
 
 consign()
