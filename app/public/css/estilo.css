@@ -326,7 +326,12 @@ hr{
 	height: 100%;
 }
 
+.perfilimg{
+		display: none;
+}
+
 .perfilimg img{
+
 	height: 20px;
 	margin: 8px 0px 0px 15px !important;
 }

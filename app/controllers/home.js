@@ -2,8 +2,20 @@ module.exports.index = function (app, req, res) {
 	if (!req.session.loggedin) {
 		res.render('home');
 	} else {
-		abreperfil();
-		res.redirect('/#perfil');
+		// abreperfil();
+
+		// var cad = document.querySelector('#cad');
+		// var login = document.querySelector('#login');
+		// var perfil = document.querySelector('#perfil');
+
+		// login.style.display == 'none'
+		// perfil.style.display == 'block';
+		// cad.style.display = 'none'
+
+		// res.redirect('/#perfil');
+			res.render('home');
+			// var imgperfil = document.querySelector('#perfilimg');
+			// imgperfil.style.display = 'block';
 	}
 }
 
@@ -18,14 +30,13 @@ module.exports.login_usuario = function (app, req, res) {
 				req.session.loggedin = true;
 				req.session.email = email;
 				res.redirect('/'); 
-				abreperfil(); 
+				// abreperfil(); 
 			} else {
 				res.send('usuario ou senha incorretos')
 			}
 			res.end();
 		});
 	} else {
-		console.log(senha)
 	res.send('por favor entre com o usuario e a senha');
 	res.end();
 }

@@ -21,11 +21,14 @@ function trocaTrindade(){
 	}
 }
 
-function abreperfil() {
-	if (login.style.display == 'none'){
-		perfil.style.display == 'block';
-		cad.style.display = 'none';
-	}
-}
+// function abreperfil() {
+// 	if (perfil.style.display == 'none'){
+// 		login.style.display == 'none'
+// 		perfil.style.display == 'block';
+// 		cad.style.display = 'none';
+// 	} else{
+// 		startTrindade();
+// 	}
+// }
 
 document.body.onload = startTrindade();
