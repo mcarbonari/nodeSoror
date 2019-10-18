@@ -383,11 +383,11 @@
 			</div>
 			<div class="loginconteudo">
 				<div class="log">
-				<form action="post" method="usuario/login">
-					<p><input type="email" id="emaillog" name="email" placeholder="Email" required></p>
-					<p><input type="password" id="senhalog" name="senha" placeholder="Senha" required></p>
+				<form action="/usuario/login" method="post">
+					<p><input type="email" id="emaillog" name="emaillog" placeholder="Email" required></p>
+					<p><input type="password" id="senhalog" name="senhalog" placeholder="Senha" required></p>
 					<div class="btnlogin">
-						<button type="submit" name="login" class="btnroxo" id="btnEntrarPerfil" onclick="abreperfil()">Entrar</button>
+						<button type="submit" class="btnroxo" id="btnEntrarPerfil" onclick="abreperfil()">Entrar</button>
 						<button onclick="trocaTrindade()" class="btntransparente">Não possui conta?</button>
 					</div>
 				</form>
@@ -474,8 +474,8 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<script src="js/addform.js"></script>
 	<script src="js/header.js"></script>
-	<script src="js/dropdown.js"></script>
 	<script src="js/addTransition.js"></script>
+	<script src="js/dropdown.js"></script>
 	<script src="js/trindade.js"></script>
 	<script src="js/modal.js"></script>
 </body>
