@@ -1,34 +1,30 @@
 var cad = document.querySelector('#cad');
 var login = document.querySelector('#login');
-var perfil = document.querySelector('#perfil');
 
+// function verificar(){
+// 	document.getElementById('perfilimg').style.display = "block";
+// 	// document.getElementById('teste').style.display = "none";
+
+// 	alert(" ma oeee");
+// }
 
 function startTrindade(){
 	cad.style.display = 'none';
-	perfil.style.display = 'none';
 	login.style.display = 'block';
+	// if(req.session.loggedin)
+	// {
+	// 	verificar();	
+	// }
 }
-
 
 function trocaTrindade(){
 	if(cad.style.display == 'none'){
 		cad.style.display = 'block';
 		login.style.display = 'none';
-		perfil.style.display = 'none';
 	}
 	else{
 		startTrindade();
 	}
 }
-
-// function abreperfil() {
-// 	if (perfil.style.display == 'none'){
-// 		login.style.display == 'none'
-// 		perfil.style.display == 'block';
-// 		cad.style.display = 'none';
-// 	} else{
-// 		startTrindade();
-// 	}
-// }
 
 document.body.onload = startTrindade();

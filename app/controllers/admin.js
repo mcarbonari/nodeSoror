@@ -2,6 +2,10 @@ module.exports.sobrenos = function(app, req, res){
   res.render("sobre/sobrenos", {validacao: {}});
 }
 
+module.exports.logado = function(app, req, res){
+  res.render("logado/logado");
+}
+
 module.exports.soror_salvar = function(app, req, res){
   var usuario = req.body;
   console.log(usuario);
