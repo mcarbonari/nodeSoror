@@ -10,4 +10,12 @@ module.exports = function(app){
 	app.get('/logado', function(req, res){
 		app.app.controllers.admin.logado(app, req, res);
 	});
+
+	app.post('/usuario/sair', function(req,res){
+		app.app.controllers.admin.logout_usuario(app, req, res);
+	});
+
+	app.post('/soror/salvarservico', function(req, res){
+		app.app.controllers.admin.soror_salvarservico(app, req, res);
+	});
 }

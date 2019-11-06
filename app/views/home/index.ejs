@@ -356,13 +356,13 @@
 							<button onclick = "trocaTrindade()" type="button" class="btntransparente">Já possui conta?</button>
 						</div>
 					</form>
-					<div class="servico" >
+					<form class="servico"  action="/soror/salvarservico" method="POST" name="form1">
 						<h3>Serviço</h3>
 						<div>
-							<p><input type="text" id="categoria" name="categoria" placeholder="Categoria"></p>
-							<p><input type="text" id="especifico" name="especifico" placeholder="Especifico"></p>
-							<p><textarea id="descricao" class="desc" name="desc" placeholder="Descrição"></textarea></p>
-							<p><input type="number" id="contato" name="contato" placeholder="Contato"></p>
+							<p><input type="text" id="categoria" name="categoria" placeholder="Categoria" required></p>
+							<p><input type="text" id="especifico" name="especifico" placeholder="Especifico" required></p>
+							<p><textarea id="descricao" class="desc" name="desc" placeholder="Descrição" required></textarea></p>
+							<p><input type="number" id="contato" name="contato" placeholder="Contato" required></p>
 						</div>
 						<div class="btnservico">
 							<button class="btnadd" onclick="addform()">
@@ -370,7 +370,7 @@
 							</button>
 							<button class="btnroxo">Salvar</button>
 						</div> 
-					</div>
+					</form>
 				</div>
 			</div>
 		</section>

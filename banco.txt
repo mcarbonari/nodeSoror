@@ -11,3 +11,23 @@ create table usuario(
 );
 
 select * from usuario;
+
+create table servico(
+	id_servico integer not null primary key auto_increment,
+	especifico varchar(70),
+	categoria varchar(50),
+	descricao varchar(300),
+	contato varchar(30),
+);
+
+select * from servico;
+
+create table relato(
+	id_relato integer not null primary key auto_increment,
+	nome 
+	email
+	assunto
+	relato
+);
+
+select * from relato;

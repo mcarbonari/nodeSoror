@@ -31,4 +31,7 @@ module.exports.soror_salvar = function(app, req, res){
 	});
 }
 
-
+module.exports.logout_usuario=function(app, req, res){
+	req.session.destroy();
+		res.redirect('/');
+}

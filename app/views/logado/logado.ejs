@@ -32,12 +32,17 @@
 					    <ul class="dropdown-menu">
 				        <li><a class="dropdown-item" href="#buscar"><strong>Buscar</strong></a></li>
 						    <hr></hr>
-						    <li><a class="dropdown-item" href="#login"><strong>Login</strong></a></li>
+						    <li><a class="dropdown-item" href="#perfil"><strong>Perfil</strong></a></li>
 				      </ul>
 				    </li>		
 						<li><a href="#aprender" class="nav-link"><strong>Aprender</strong></a></li>
 						<li><a href="#relatar" class="nav-link"><strong>Relatar</strong></a></li>
-						<li class="perfilimg" id="perfilimg"><a href="perfil"><img src="img/perfil2.png"></a></li>
+						<!-- <li class="perfilimg" id="perfilimg"><a href="#perfil"><img src="img/perfil2.png"></a></li> -->
+						<form action="/usuario/sair" method="post" class="perfilimg">
+			 	      <button type="submit" value="sair" class="logoutbutton">
+			 	      	<img  src="img/logout2.png">
+			 	    	</button>
+	        </form>
 					</ul>
 				</div>
 			</div>
