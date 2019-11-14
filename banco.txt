@@ -18,6 +18,8 @@ create table servico(
 	categoria varchar(50),
 	descricao varchar(300),
 	contato varchar(30),
+	pessoal integer,
+	FOREIGN KEY (pessoal) REFERENCES usuario(id_pessoal)
 );
 
 select * from servico;
