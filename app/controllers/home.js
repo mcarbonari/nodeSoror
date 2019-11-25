@@ -2,7 +2,14 @@ module.exports.index = function (app, req, res) {
 	if (!req.session.loggedin) {
 		res.render('home');
 	} else {
-		res.redirect('logado');
+		// res.redirect('logado');
+
+		var connection = app.config.dbConnection();
+		var sororModel = new app.app.models.sororDAO(connection);
+		
+		sororModel.getUsuario(id_usuario, function(error, result){
+			res.redirect('logado', {validacao:{}, usuario : result});
+		});
 	}
 }
 

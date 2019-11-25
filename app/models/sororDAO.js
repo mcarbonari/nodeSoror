@@ -10,6 +10,10 @@ sororDAO.prototype.loginUsuario = function(emaillog, senhalog, callback) {
 	this._connection.query('select * from usuario where email = ? AND senha = ?', [emaillog,senhalog], callback);
 }
 
+sororDAO.prototype.getUsuario = function(id_usuario, callback){
+	this._connection.query('select * from usuario where id_usuario = ' + id_usuario.id_usuario, callback);
+    }
+
 
 sororDAO.prototype.salvarServico = function(servico, callback){
 	this._connection.query('insert into servico set ? ', servico, callback);

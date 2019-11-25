@@ -3,7 +3,7 @@ module.exports.sobrenos = function(app, req, res){
 }
 
 module.exports.logado = function(app, req, res){
-  res.render("logado/logado");
+  res.render("logado/logado", {validacao: {}});
 }
 
 module.exports.soror_salvar = function(app, req, res){
