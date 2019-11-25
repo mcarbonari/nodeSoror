@@ -17,19 +17,17 @@ create table servico(
 	especifico varchar(70),
 	categoria varchar(50),
 	descricao varchar(300),
-	contato varchar(30),
-	pessoal integer,
-	FOREIGN KEY (pessoal) REFERENCES usuario(id_pessoal)
+	contato varchar(15)
 );
 
 select * from servico;
 
 create table relato(
 	id_relato integer not null primary key auto_increment,
-	nome 
-	email
-	assunto
-	relato
+	nomerelato varchar(70),
+	emailrelato varchar(50),
+	assuntorelato varchar(70),
+	relatorelato longtext
 );
 
 select * from relato;

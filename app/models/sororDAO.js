@@ -11,12 +11,13 @@ sororDAO.prototype.loginUsuario = function(emaillog, senhalog, callback) {
 }
 
 
-
-sororDAO.prototype.salvarServico = function(user, senha, callback){
+sororDAO.prototype.salvarServico = function(servico, callback){
 	this._connection.query('insert into servico set ? ', servico, callback);
 }
 
-
+sororDAO.prototype.salvarRelato = function(relato, callback){
+	this._connection.query('insert into relato set ? ', relato, callback);
+}
 
 module.exports = function(){
   return sororDAO;

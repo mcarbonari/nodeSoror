@@ -32,14 +32,13 @@ module.exports.soror_salvar = function(app, req, res){
 }
 
 module.exports.soror_salvarservico = function(app, req, res){
-  var usuario = req.body;
-  console.log(usuario);
+  var servico = req.body;
+  console.log(servico);
 
-  req.assert('nome', 'Nome é obrigatório').notEmpty();
-	req.assert('email', 'Email é obrigatório').isEmail();
-	req.assert('senha', 'Senha é obrigatório').notEmpty();
-	req.assert('confirmar_senha', 'Confirmar senha é obrigatório').notEmpty();
-	req.assert('cpf', 'CPF inválido').len(14, 14);
+	req.assert('categoria', 'é obrigatório').notEmpty();
+	req.assert('especifico', 'é obrigatório').notEmpty();
+	req.assert('descricao', 'é obrigatório').notEmpty();
+	req.assert('contato', 'é obrigatório').len(14, 14);
 
 	var erros = req.validationErrors();
 	if (erros){
@@ -51,7 +50,31 @@ module.exports.soror_salvarservico = function(app, req, res){
   var connection = app.config.dbConnection();
 	var sororModel = new app.app.models.sororDAO(connection);
 
-	sororModel.salvarUsuario(usuario, function(error, result){
+	sororModel.salvarServico(servico, function(error, result){
+		res.redirect('/#cad');
+	});
+}
+
+module.exports.soror_salvarrelato = function(app, req, res){
+  var relato = req.body;
+  console.log(relato);
+
+	req.assert('nomerelato', 'é obrigatório. para anonimato escreva ANONIMO').notEmpty();
+	req.assert('emailrelato', 'Email é obrigatório').isEmail();
+	req.assert('assuntorelato', 'é obrigatório').notEmpty();
+	req.assert('relatorelato', 'é obrigatório').notEmpty();
+
+	var erros = req.validationErrors();
+	if (erros){
+		console.log(erros);
+		res.render("home/index", {validacao: erros});
+		return;
+	}
+
+  var connection = app.config.dbConnection();
+	var sororModel = new app.app.models.sororDAO(connection);
+
+	sororModel.salvarRelato(relato, function(error, result){
 		res.redirect('/#cad');
 	});
 }

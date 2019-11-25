@@ -271,16 +271,16 @@
 					</form>
 				</div>
 				<div class="relatos">
-					<div class="relatoform">
+					<form class="relatoform" action="/soror/salvarrelato" method="POST">
 						<h3>Enviar um relato</h3>
 						<form class="formajuste">
-							<p><input type="text" id="nomerelato" placeholder="Nome (opcional)"></p>
-							<p><input type="email" id="emailrelato" placeholder="Email"></p>
-							<p><input type="text" id="assuntorelato" placeholder="Assunto"></p>
-							<p><textarea class="desc" type="password" id="descrelato" placeholder="Relato"></textarea></p>
+							<p><input type="text" id="nomerelato" placeholder="Nome (opcional)" required></p>
+							<p><input type="email" id="emailrelato" placeholder="Email" required></p>
+							<p><input type="text" id="assuntorelato" placeholder="Assunto" required></p>
+							<p><textarea class="desc" type="password" id="relatorelato" name="relatorelato" placeholder="Relato" required></textarea></p>
 							<button class="btnroxo">Enviar relato</button>
 						</form>
-					</div>
+					</form>
 					<div class="relato">
 						<h3>Título</h3>
 						<p>Essa caixinha ta aqui como exemplo; cada caixinha dessa será um relato. O processo para adicionar um relato aqui deverá ser: enviar um relato ao email do adm através do formulário, o adm fará uma análise e decidirá se vai postar ou não. Não sei como vou fazer isso (alo Jónison?).</p>
@@ -348,7 +348,7 @@
 							<p id="msg_senha"></p>		
 							<p><input type="password" id="confirmar_senha" placeholder="Confirmar senha" name="confirmar_senha" required></p>
 							<p id="msg_confirmarSenha"></p>
-							<p><input type="cpf" id="cpf" placeholder="CPF" name="cpf" required onKeyPress="MascaraCPF(form1.cpf);" maxlength="14" onBlur="ValidarCPF(form1.cpf);" ></p>
+							<p><input type="cpf" id="cpf" placeholder="CPF" name="cpf" required onKeyPress="MascaraCPF(cpf);" maxlength="14" onBlur="ValidarCPF(form1.cpf);" ></p>
 							<p id="msg_cpf"></p>
 						</div>
 						<div class="btnpessoal">
@@ -356,13 +356,13 @@
 							<button onclick = "trocaTrindade()" type="button" class="btntransparente">Já possui conta?</button>
 						</div>
 					</form>
-					<form class="servico"  action="/soror/salvarservico" method="POST" name="form1">
+					<form class="servico"  action="/soror/salvarservico" method="POST" name="form2">
 						<h3>Serviço</h3>
 						<div>
 							<p><input type="text" id="categoria" name="categoria" placeholder="Categoria" required></p>
 							<p><input type="text" id="especifico" name="especifico" placeholder="Especifico" required></p>
-							<p><textarea id="descricao" class="desc" name="desc" placeholder="Descrição" required></textarea></p>
-							<p><input type="number" id="contato" name="contato" placeholder="Contato" required></p>
+							<p><textarea id="descricao" class="desc" name="descricao" placeholder="Descrição" required></textarea></p>
+							<p><input type="text" id="contato" name="contato" placeholder="Contato" required onKeyPress="MascaraTelefone(tel);" maxlength="14" onBlur="ValidaTelefone(form2.tel);" ></p>
 						</div>
 						<div class="btnservico">
 							<button class="btnadd" onclick="addform()">

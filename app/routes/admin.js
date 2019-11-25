@@ -18,4 +18,8 @@ module.exports = function(app){
 	app.post('/soror/salvarservico', function(req, res){
 		app.app.controllers.admin.soror_salvarservico(app, req, res);
 	});
+
+	app.post('/soror/salvarrelato', function(req, res){
+		app.app.controllers.admin.soror_salvarrelato(app, req, res);
+	});
 }
