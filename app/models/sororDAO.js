@@ -11,7 +11,7 @@ sororDAO.prototype.loginUsuario = function(emaillog, senhalog, callback) {
 }
 
 sororDAO.prototype.getUsuario = function(id_usuario, callback){
-	this._connection.query('select * from usuario where id_usuario = ' + id_usuario.id_usuario, callback);
+	this._connection.query('select * from usuario where id_usuario = ' + id_usuario, callback);
     }
 
 
