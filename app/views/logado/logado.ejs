@@ -276,16 +276,16 @@
 					</form>
 				</div>
 				<div class="relatos">
-					<div class="relatoform">
+					<form class="relatoform" action="/soror/salvarrelato" method="POST">
 						<h3>Enviar um relato</h3>
-						<form class="formajuste">
-							<p><input type="text" id="nomerelato" placeholder="Nome (opcional)"></p>
-							<p><input type="email" id="emailrelato" placeholder="Email"></p>
-							<p><input type="text" id="assuntorelato" placeholder="Assunto"></p>
-							<p><textarea class="desc" type="password" id="descrelato" placeholder="Relato"></textarea></p>
+						<div class="formajuste">
+							<p><input type="text" id="nomerelato" name="nomerelato" placeholder="Nome (opcional)" required></p>
+							<p><input type="email" id="emailrelato" name="emailrelato" placeholder="Email" required></p>
+							<p><input type="text" id="assuntorelato" name="assuntorelato" placeholder="Assunto" required></p>
+							<p><textarea class="desc" type="password" id="relatorelato" name="relatorelato" placeholder="Relato" required></textarea></p>
 							<button class="btnroxo">Enviar relato</button>
-						</form>
-					</div>
+						</div>
+					</form>
 					<div class="relato">
 						<h3>Título</h3>
 						<p>Essa caixinha ta aqui como exemplo; cada caixinha dessa será um relato. O processo para adicionar um relato aqui deverá ser: enviar um relato ao email do adm através do formulário, o adm fará uma análise e decidirá se vai postar ou não. Não sei como vou fazer isso (alo Jónison?).</p>

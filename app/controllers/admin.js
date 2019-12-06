@@ -75,8 +75,31 @@ module.exports.soror_salvarrelato = function(app, req, res){
 	var sororModel = new app.app.models.sororDAO(connection);
 
 	sororModel.salvarRelato(relato, function(error, result){
-		res.redirect('/#cad');
+		res.redirect('/');
 	});
+}
+
+module.exports.usuario = function(app, req, res){
+  if (req.session.loggedin) {
+  	var connection = app.config.dbConnection();
+   	var sororModel = new app.app.models.sororDAO(connection);
+
+		if (req.query.id_usuario){
+			var id_usuario = req.query;
+			console.log("aaaaaaaaaaaaaaaaaaaaaa"+id_usuario);
+		} else{
+				res.redirect('/logado');
+		 	return;
+		}
+
+  sororModel.getUsuario(id_usuario,function(error, result){
+    res.render('logado',{usuario:result});
+	});
+
+	} else {
+	  res.redirect('/');
+	}
+  
 }
 
 module.exports.logout_usuario=function(app, req, res){

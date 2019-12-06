@@ -11,13 +11,15 @@ sororDAO.prototype.loginUsuario = function(emaillog, senhalog, callback) {
 }
 
 sororDAO.prototype.getUsuario = function(id_usuario, callback){
+	console.log("hahahahaha");
 	this._connection.query('select * from usuario where id_usuario = ' + id_usuario, callback);
-    }
+}
 
 
 sororDAO.prototype.salvarServico = function(servico, callback){
 	this._connection.query('insert into servico set ? ', servico, callback);
 }
+
 
 sororDAO.prototype.salvarRelato = function(relato, callback){
 	this._connection.query('insert into relato set ? ', relato, callback);
