@@ -47,6 +47,14 @@
 
 .some{display: none;}
 
+.central{
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.central:hover{
+   color: rgba(255, 255, 255, 0.8);
+}
+
 @media screen and (min-width: 725px){
   .some{
     display: flex;
